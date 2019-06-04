@@ -1,0 +1,193 @@
+body, html{
+    height:100%;
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color:#666;
+    background-color: #282e34;
+}
+.logo{
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    margin-top: 15px; 
+}
+div.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+header {
+    overflow:hidden;
+    position:fixed; /* Set the navbar to fixed position */
+    top:0; /* Position the navbar at the top of the page */
+    max-width: 1300px;
+    margin: 10 auto;
+    padding: 100 300px;
+    float: left;
+    width: 100%; 
+}
+
+header h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    float: left;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 22px 0 0 0;
+    float: right;
+}
+
+@media all and (max-width:768px){
+    header ul {
+            display: none;
+    }
+}
+
+header img.hamburger {
+    display: none;
+    max-width: 30px;
+    margin-top: 28px;
+    float: right;
+}
+
+@media all and (max-width:768px){
+    header img.hamburger {
+            display: block;
+    }
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+div.overlay {
+    display: none;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+div.overlay ul {
+    padding: 0;
+    margin: 100px 0 0 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+div.overlay ul li {
+    display: block;
+}
+
+div.overlay ul li a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 50px;
+}
+
+div.overlay img.close {
+    max-width: 30px;
+    position: absolute;
+    right: 30px;
+    top: 26px;
+}
+
+/*
+    Parallex css
+*/
+
+.pimg1, .pimg2, .pimg3{
+    position:relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    /*
+        fixed = parallax
+        scroll = normal
+    */
+
+    background-attachment: fixed;
+
+}
+.pimg1{
+    background-image: url('../images/backlit-clouds-friends-853168.jpg');
+    min-height:50%;
+}
+.pimg2{
+    background-image: url('../images/backlit-bright-dawn-697243.jpg');
+    min-height:50%;
+}
+.pimg3{
+    background-image: url('../images/action-backlit-beach-1046896.jpg');
+    min-height:50%;
+}
+
+.section{
+    text-align:center;
+    padding: 50px 80px;
+}
+
+.section-light{
+    background-color: #D3D3D3;
+    color: #666;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color: #ddd ;
+}
+
+.ptext{
+    position: absolute;
+    top:50%;
+    width:100%;
+    text-align: center;
+    color:#000000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background-color: #111;
+    color:#fff;
+    padding:20px;
+}
+
+.ptext .border.trans{
+    background-color: transparent;
+}
+
+@media all and (max-width:768px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+    .navbar ul{
+        display:none;
+    }
+}
