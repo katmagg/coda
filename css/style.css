@@ -23,7 +23,7 @@ div.container {
     padding: 0 30px;
 }
 
-header {
+nav.navbar {
     overflow:hidden;
     position:fixed; /* Set the navbar to fixed position */
     top:0; /* Position the navbar at the top of the page */
@@ -34,13 +34,13 @@ header {
     width: 100%; 
 }
 
-header h1 {
+nav.navbar h1 {
     color: #ffffff;
     text-transform: uppercase;
     float: left;
 }
 
-header ul {
+nav.navbar ul {
     list-style-type: none;
     padding: 0;
     margin: 22px 0 0 0;
@@ -48,12 +48,12 @@ header ul {
 }
 
 @media all and (max-width:768px){
-    header ul {
+    nav.navbar ul {
             display: none;
     }
 }
 
-header img.hamburger {
+nav.navbar img.hamburger {
     display: none;
     max-width: 30px;
     margin-top: 28px;
@@ -61,16 +61,16 @@ header img.hamburger {
 }
 
 @media all and (max-width:768px){
-    header img.hamburger {
+    nav.navbar img.hamburger {
             display: block;
     }
 }
 
-header ul li {
+nav.navbar ul li {
     display: inline-block;
 }
 
-header ul li a {
+nav.navbar ul li a {
     color: #ffffff;
     text-transform: uppercase;
     text-decoration: none;
@@ -187,7 +187,26 @@ div.overlay img.close {
     .pimg1, .pimg2, .pimg3{
         background-attachment: scroll;
     }
-    .navbar ul{
+    nav.navbar ul{
         display:none;
     }
+}
+
+nav.shrink{
+    background-color: rgba(0,0,0,0.5);
+    height: 130px;
+    padding-top: 0px;
+}
+
+nav.shrink.navbar-logo{
+    font-size: 20px;
+    padding: 60px 0px 0px 180px;
+    color: @white;
+}
+
+nav.shrink>li>a {
+    color: @white;
+    font-size: 16px;
+    font-family: @heading-text;
+    padding-top: 60px;
 }
